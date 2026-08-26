@@ -1,0 +1,18 @@
+<!--<resources>-->
+<!--    <string name="app_name">MAD Tip Calc</string>-->
+<!--    <string name="Enter_Bill_Amount">Enter Bill Amount</string>-->
+<!--    <string name="tip_15">15%</string>-->
+<!--    <string name="tip_18">18%</string>-->
+<!--    <string name="tip_20">20%</string>-->
+
+
+<!--    <string name="tip_result">Tip: $%1$s, Total Bill: $%1$s </string>-->
+<!--</resources>-->
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="bill_amount_hint">Enter Bill Amount</string>
+    <string name="tip_15">15%</string>
+    <string name="tip_18">18%</string>
+    <string name="tip_20">20%</string>
+    <string name="tip_result_form">Tip: $%1$s, Total Bill: $%2$s</string>
+</resources>
