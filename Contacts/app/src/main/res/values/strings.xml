@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name ="fullname">Fullname:</string>
+    <string name="cellphoneNumber">Cellphone Number:</string>
+    <string name="address">Address:</string>
+    <string name="fullname_hint">Shivaar Sewnarain</string>
+    <string name="cellphone_hint">069....</string>
+    <string name="address_hint">8 Fiddlewood....</string>
+    <string name="SaveBtn">Save</string>
+</resources>
