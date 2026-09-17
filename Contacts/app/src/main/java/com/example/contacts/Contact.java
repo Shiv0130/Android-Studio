@@ -23,6 +23,10 @@ public class Contact {
         return this.address;
     }
 
+    public void setContactID(int contactID) {
+        this.contactID = contactID;
+    }
+
     public void setContactName(String name){
         contactName = name;
     }
