@@ -13,13 +13,21 @@ import java.util.List;
 
 public class PantryAdapter extends RecyclerView.Adapter<PantryAdapter.ViewHolder> {
 
+    public interface Listener {
+        void onClick(PantryItem item);
+        void onLongClick(PantryItem item);
+    }
+
     private final List<PantryItem> items = new ArrayList<>();
+    private Listener listener;
+
+    public void setListener(Listener listener) {
+        this.listener = listener;
+    }
 
     public void setItems(List<PantryItem> data) {
         items.clear();
-        if (data != null) {
-            items.addAll(data);
-        }
+        if (data != null) items.addAll(data);
         notifyDataSetChanged();
     }
 
@@ -37,6 +45,14 @@ public class PantryAdapter extends RecyclerView.Adapter<PantryAdapter.ViewHolder
         holder.textName.setText(item.getName());
         holder.textQty.setText(item.getQuantity() + " " + item.getUnit());
         holder.textExpiry.setText(item.getExpiry());
+
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) listener.onClick(item);
+        });
+        holder.itemView.setOnLongClickListener(v -> {
+            if (listener != null) listener.onLongClick(item);
+            return true;
+        });
     }
 
     @Override
@@ -45,9 +61,7 @@ public class PantryAdapter extends RecyclerView.Adapter<PantryAdapter.ViewHolder
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        final TextView textName;
-        final TextView textQty;
-        final TextView textExpiry;
+        final TextView textName, textQty, textExpiry;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
