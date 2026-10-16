@@ -1,5 +1,6 @@
 package com.example.smartpantry;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -73,7 +74,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new android.content.Intent(this, AddIngredientActivity.class)));
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
-        bottomNav.setOnItemSelectedListener(item -> true);
+        bottomNav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_recipes) {
+                startActivity(new Intent(this, RecipesActivity.class));
+                return true;
+            }
+            if (id == R.id.nav_settings) {
+                startActivity(new Intent(this, SettingsActivity.class));
+                return true;
+            }
+            // nav_pantry = stay here
+            return true;
+        });
     }
 
     private void seedIfEmpty() {
