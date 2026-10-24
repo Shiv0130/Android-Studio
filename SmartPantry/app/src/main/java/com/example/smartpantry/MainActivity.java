@@ -110,5 +110,8 @@ public class MainActivity extends AppCompatActivity {
         if (dbHelper != null) {
             refreshList();
         }
+        // Coming back from Recipes/Settings: highlight Pantry tab again
+        BottomNavigationView nav = findViewById(R.id.bottom_nav);
+        if (nav != null) nav.getMenu().findItem(R.id.nav_pantry).setChecked(true);
     }
 }
