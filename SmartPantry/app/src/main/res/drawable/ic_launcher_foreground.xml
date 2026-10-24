@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher foreground: simple jar/pantry shape -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFFFFF" android:pathData="M40,34h28v6h-28z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M38,42h32v30c0,3 -2,5 -5,5h-22c-3,0 -5,-2 -5,-5z"/>
+    <path android:fillColor="#2E7D32" android:pathData="M46,52h16v4h-16zM46,60h16v4h-16z"/>
+</vector>
