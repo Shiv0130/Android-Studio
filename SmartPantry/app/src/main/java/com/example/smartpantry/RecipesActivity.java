@@ -32,8 +32,9 @@ public class RecipesActivity extends AppCompatActivity {
             i.putExtra(RecipeDetailActivity.EXTRA_NAME, recipe.getName());
             i.putExtra(RecipeDetailActivity.EXTRA_INSTRUCTIONS, recipe.getInstructions());
             i.putExtra(RecipeDetailActivity.EXTRA_PREP, recipe.getPrepMinutes());
+            // Send ingredients with quantities, one per line
             i.putExtra(RecipeDetailActivity.EXTRA_INGREDIENTS,
-                    android.text.TextUtils.join(", ", recipe.getRequiredIngredients()));
+                    android.text.TextUtils.join("\n", recipe.getRequiredIngredients()));
             startActivity(i);
         });
 

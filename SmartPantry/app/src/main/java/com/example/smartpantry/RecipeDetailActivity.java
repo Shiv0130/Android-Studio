@@ -27,7 +27,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.text_detail_prep))
                 .setText(getString(R.string.label_prep_minutes, prep));
         ((TextView) findViewById(R.id.text_detail_ingredients))
-                .setText(getString(R.string.label_needs) + ": " + ingredients);
+                .setText(getString(R.string.label_needs_list, ingredients));
         ((TextView) findViewById(R.id.text_detail_instructions)).setText(instructions);
     }
 }

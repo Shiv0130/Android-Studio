@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void onLongClick(PantryItem item) {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle(R.string.btn_delete)
-                        .setMessage(item.getName() + "?")
+                        .setMessage(getString(R.string.delete_item_confirm, item.getName()))
                         .setPositiveButton(R.string.btn_delete, (d, w) -> {
                             dbHelper.delete(item.getId());
                             refreshList();

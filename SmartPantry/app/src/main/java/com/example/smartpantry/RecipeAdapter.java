@@ -42,7 +42,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder h, int position) {
         Recipe r = items.get(position);
         h.name.setText(r.getName());
-        h.prep.setText(r.getPrepMinutes() + " min");
+        h.prep.setText(h.itemView.getContext()
+                .getString(R.string.label_prep_minutes, r.getPrepMinutes()));
         h.itemView.setOnClickListener(v -> {
             if (listener != null) listener.onClick(r);
         });

@@ -32,4 +32,6 @@
     <string name="label_notifications">Recipe notifications</string>
     <string name="label_needs">Needs</string>
     <string name="label_prep_minutes">%1$d minutes</string>
+    <string name="label_needs_list">Needs:\n%1$s</string>
+    <string name="delete_item_confirm">Delete %1$s?</string>
 </resources>
