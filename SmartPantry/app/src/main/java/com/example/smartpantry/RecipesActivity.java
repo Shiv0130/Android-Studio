@@ -37,9 +37,11 @@ public class RecipesActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-        List<PantryItem> pantry = new PantryDbHelper(this).getAll();
+        // Load pantry and recipes from SQLite, keep only strict matches
+        PantryDbHelper db = new PantryDbHelper(this);
+        List<PantryItem> pantry = db.getAll();
         List<Recipe> matched = new ArrayList<>();
-        for (Recipe r : Recipe.catalog()) {
+        for (Recipe r : db.getAllRecipes()) {
             if (r.matches(pantry)) matched.add(r);
         }
 
