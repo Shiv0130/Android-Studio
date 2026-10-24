@@ -24,13 +24,12 @@ public class Recipe {
 
     // Strict match: EVERY ingredient must be in the pantry
     // AND the pantry must hold at least the required quantity
+    // (names are singular/plural safe, units are converted)
     public boolean matches(List<PantryItem> pantry) {
         for (RecipeIngredient need : requiredIngredients) {
             boolean enough = false;
             for (PantryItem p : pantry) {
-                if (p.getName() != null
-                        && p.getName().trim().toLowerCase().equals(need.getName())
-                        && p.getQuantity() >= need.getQuantity()) {
+                if (IngredientMatcher.hasEnough(p, need)) {
                     enough = true;
                     break;
                 }
