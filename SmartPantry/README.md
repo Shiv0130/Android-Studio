@@ -58,7 +58,7 @@ Command line: `cd SmartPantry && ./gradlew assembleDebug` (on Windows, `gradlew.
 | 7–8 | Recipe matching, detail, Settings |
 | 9 | Polish, README, submission branch |
 
-Branch **`lab-9`** holds the complete app for merge into `main`.
+Branch **`lab-9`** holds the Lab 9 version. The Phase 2 fixes (strict quantity matching, plural/unit handling, 18 seeded recipes in SQLite v2, Gradle wrapper, launcher icons) are on **`phase-2-fixes`**, which is the submission branch.
 
 ## Match rule
 A recipe is suggested only if **every** required ingredient is in the pantry **with at least the required quantity**. Names are case-insensitive and singular/plural safe (tomatoes = tomato), and units are converted (kg to g, L to ml). See `Recipe.matches()` and `IngredientMatcher.hasEnough()`.
